@@ -24,7 +24,6 @@ export default function Navabar() {
                 to="hero"
                 spy={true}
                 smooth="easeInOutQuart"
-                hashSpy={true}
                 offset={-100}
                 duration={800}
                 className="hover:text-highlightedHover transition-colors duration-200"
@@ -37,7 +36,6 @@ export default function Navabar() {
                 to="about"
                 spy={true}
                 smooth="easeInOutQuart"
-                hashSpy={true}
                 offset={-50}
                 duration={800}
                 className="hover:text-highlightedHover transition-colors duration-200"
@@ -50,7 +48,6 @@ export default function Navabar() {
                 to="features"
                 spy={true}
                 smooth="easeInOutQuart"
-                hashSpy={true}
                 offset={-50}
                 duration={800}
                 className="hover:text-highlightedHover transition-colors duration-200"
@@ -63,7 +60,6 @@ export default function Navabar() {
                 to="pricing"
                 spy={true}
                 smooth="easeInOutQuart"
-                hashSpy={true}
                 offset={-50}
                 duration={800}
                 className="hover:text-highlightedHover transition-colors duration-200"
@@ -76,7 +72,6 @@ export default function Navabar() {
                 to="testimonials"
                 spy={true}
                 smooth="easeInOutQuart"
-                hashSpy={true}
                 offset={-50}
                 duration={800}
                 className="hover:text-highlightedHover transition-colors duration-200"
@@ -109,11 +104,11 @@ export default function Navabar() {
         <div className="md:hidden absolute bg-white top-full left-0 w-full border-b border-gray-200 px-6 py-8 flex flex-col text-center text-lg">
           <ul className="flex flex-col space-y-6 text-secondaryText font-medium ">
             <li>
-              <Link onClick={toggleMenu}
+              <Link
+                onClick={toggleMenu}
                 to="hero"
                 spy={true}
                 smooth="easeInOutQuart"
-                hashSpy={true}
                 offset={-100}
                 duration={800}
                 className="hover:text-highlightedHover transition-colors duration-200"
@@ -122,11 +117,11 @@ export default function Navabar() {
               </Link>
             </li>
             <li>
-              <Link onClick={toggleMenu}
+              <Link
+                onClick={toggleMenu}
                 to="about"
                 spy={true}
                 smooth="easeInOutQuart"
-                hashSpy={true}
                 offset={-50}
                 duration={800}
                 className="hover:text-highlightedHover transition-colors duration-200"
@@ -135,11 +130,11 @@ export default function Navabar() {
               </Link>
             </li>
             <li>
-              <Link onClick={toggleMenu}
+              <Link
+                onClick={toggleMenu}
                 to="features"
                 spy={true}
                 smooth="easeInOutQuart"
-                hashSpy={true}
                 offset={-50}
                 duration={800}
                 className="hover:text-highlightedHover transition-colors duration-200"
@@ -148,11 +143,11 @@ export default function Navabar() {
               </Link>
             </li>
             <li>
-              <Link onClick={toggleMenu}
+              <Link
+                onClick={toggleMenu}
                 to="pricing"
                 spy={true}
                 smooth="easeInOutQuart"
-                hashSpy={true}
                 offset={-50}
                 duration={800}
                 className="hover:text-highlightedHover transition-colors duration-200"
@@ -161,11 +156,11 @@ export default function Navabar() {
               </Link>
             </li>
             <li>
-              <Link onClick={toggleMenu}
+              <Link
+                onClick={toggleMenu}
                 to="testimonials"
                 spy={true}
                 smooth="easeInOutQuart"
-                hashSpy={true}
                 offset={-50}
                 duration={800}
                 className="hover:text-highlightedHover transition-colors duration-200"
