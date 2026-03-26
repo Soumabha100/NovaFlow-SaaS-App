@@ -11,7 +11,7 @@ export default function Navabar() {
   }
 
   return (
-    <nav className="font-inter fixed top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 w-full">
+    <nav className="font-inter sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 w-full">
       <div className="flex justify-between items-center max-w-7xl mx-auto px-6 py-4">
         <div>
           <img src={logoNF} alt="" className="w-52 cursor-pointer" />
