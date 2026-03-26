@@ -13,13 +13,12 @@ import ScrollReveal from "./Components/Animations/ScrollReveal";
 function App() {
   useEffect(() => {
     if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "manual";
+      window.history.scrollRestoration = "auto";
     }
   }, []);
 
   return (
     <div>
-      <h1>
         <Navabar />
 
         <main className="overflow-x-hidden">
@@ -49,7 +48,6 @@ function App() {
         </main>
 
         <Footer />
-      </h1>
     </div>
   );
 }

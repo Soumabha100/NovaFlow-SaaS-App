@@ -55,7 +55,7 @@ export default function Footer() {
           </ul>
         </div>
         <div>
-          <h3 className="text-lg text-primaryText">Comapny</h3>
+          <h3 className="text-lg text-primaryText">Comapany</h3>
           <ul className="pt-4 space-y-2 text-gray-600">
             <li>
               <a className="hover:text-highlightedHover transition-colors ease-in-out duration-300" href="">About Us</a>

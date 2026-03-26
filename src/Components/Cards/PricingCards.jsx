@@ -13,11 +13,11 @@ export default function PricingCards ({id, name, price, desc, features, button})
                 <p className="text-5xl py-6 text-primaryText font-semibold">${price}<span className="text-highlightedText">/mo</span></p>
 
                 <div className="min-h-60">
-                {features.map((index, feature) => (
+                {features.map((feature, index) => (
                     <div key={index} className="flex flex-row items-center text-sm my-2">
-                    <FaDotCircle className="text-highlightedText shirnk-0 text-lg"/>
+                    <FaDotCircle className="text-highlightedText shrink-0 text-lg"/>
                     <p className="px-2 text-secondaryText leading-relaxed">
-                         {features[feature]}
+                         {feature}
                     </p>
                 </div>
                 ))}
