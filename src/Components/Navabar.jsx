@@ -3,12 +3,20 @@ import { MdMenu } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import logoNF from "../assets/LightBG.png";
 import { Link } from "react-scroll";
+import AuthModal from "./Modals/AuthModal";
 
 export default function Navabar() {
   const [isOpen, setIsOpen] = useState(false);
   function toggleMenu() {
     setIsOpen(!isOpen);
   }
+
+  const [showModal, setShowModal] = useState(false);
+
+  const mobileButtonClick = () => {
+    toggleMenu();
+    setShowModal(true);
+  };
 
   return (
     <nav className="font-inter sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 w-full">
@@ -82,7 +90,7 @@ export default function Navabar() {
           </ul>
         </div>
         <div>
-          <button className="hidden md:flex text-white font-bold hover:cursor-pointer hover:bg-highlightedHover hover:scale-105 transition-all duration-300 bg-highlightedText px-8 py-3 rounded-2xl ">
+          <button onClick={() => setShowModal(true)} className="hidden md:flex text-white font-bold hover:cursor-pointer hover:bg-highlightedHover hover:scale-105 transition-all duration-300 bg-highlightedText px-8 py-3 rounded-2xl ">
             Join Us
           </button>
         </div>
@@ -99,6 +107,11 @@ export default function Navabar() {
           )}
         </button>
       </div>
+
+      <AuthModal
+      isOpen={showModal}
+      onClose={() => setShowModal(false)}
+      />
 
       {isOpen && (
         <div className="md:hidden absolute bg-white top-full left-0 w-full border-b border-gray-200 px-6 py-8 flex flex-col text-center text-lg">
@@ -170,7 +183,7 @@ export default function Navabar() {
             </li>
           </ul>
 
-          <button className=" mt-6 text-white font-bold hover:cursor-pointer hover:bg-highlightedHover hover:scale-105 transition-all duration-300 bg-highlightedText px-8 py-3 rounded-2xl ">
+          <button  onClick={mobileButtonClick} className=" mt-6 text-white font-bold hover:cursor-pointer hover:bg-highlightedHover hover:scale-105 transition-all duration-300 bg-highlightedText px-8 py-3 rounded-2xl ">
             Join Us
           </button>
         </div>

@@ -1,7 +1,13 @@
+import { useState } from "react";
 import heroImg1 from "../assets/HeroImage.webp";
+import AuthModal from "./Modals/AuthModal";
+
 
 export default function Hero() {
+  const [showModal, setShowModal] = useState(false);
+
   return (
+
     <section id="hero" className="w-full py-12 bg-backGround">
 
     <div className="font-inter px-6 max-w-7xl mx-auto">
@@ -16,11 +22,11 @@ export default function Hero() {
             Manage tasks, automate processes, and boost team productivity with
             an all-in-one modern platform.
           </p>
-          <div className="flex flex-col sm:flex-row text-white gap-6 w-full sm:w-auto">
+          <div onClick={() => setShowModal(true)} className="flex flex-col sm:flex-row text-white gap-6 w-full sm:w-auto">
             <button className="rounded-xl py-4 px-8 hover:cursor-pointer font-bold bg-highlightedText hover:bg-highlightedHover hover:translate-y-1 transition-all hover:shadow-lg duration-300">
               Start for Free
             </button>
-            <button className="rounded-xl py-4 px-8 font-bold bg-surface text-highlightedText border hover:cursor-pointer border-highlightedText hover:text-highlightedHover hover:border-highlightedHover hover:shadow-lg transition-all  hover:translate-y-1 duration-300">
+            <button onClick={() => setShowModal(true)} className="rounded-xl py-4 px-8 font-bold bg-surface text-highlightedText border hover:cursor-pointer border-highlightedText hover:text-highlightedHover hover:border-highlightedHover hover:shadow-lg transition-all  hover:translate-y-1 duration-300">
               Book a Demo
             </button>
           </div>
@@ -30,6 +36,10 @@ export default function Hero() {
         </div>
       </div>
     </div>
+    <AuthModal
+    isOpen={showModal}
+    onClose={() => setShowModal(false)}
+    />
     </section>
   );
 }
